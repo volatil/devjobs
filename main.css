@@ -1,0 +1,40 @@
+
+:root {
+	--color: #5964e0;
+}
+header {
+	background: url("https://mcornale-devjobs-web-app.netlify.app/static/media/bg-pattern-header.f3307602.svg");
+	padding: 20px 0;
+	margin-bottom: 60px;
+}
+header > img {
+	padding-left: 10%;
+}
+
+section.cargos {
+	background: whitesmoke;
+	background: #e7e7e7;
+	padding: 4%;
+}
+section.cargos > .cargo {
+	background: white;
+	padding: 3%;
+	border-radius: 20px;
+	position: relative;
+	margin-top: 50px;
+	padding-top: 30px;
+}
+section.cargos > .cargo > .logo {
+	width: 50px;
+	height: 50px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -30px;
+}
+section.cargos > .cargo > .logo > img {
+	width: 60%;
+}

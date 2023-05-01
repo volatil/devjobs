@@ -6,27 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link href="main.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 		<title>DevJOB</title>
 
 	</head>
 	<body>
-
-		<style type="text/css">
-			:root {
-				--color: #5964e0;
-			}
-			header {
-				background: url("https://mcornale-devjobs-web-app.netlify.app/static/media/bg-pattern-header.f3307602.svg");
-				padding: 20px 0;
-				margin-bottom: 60px;
-			}
-			header > img {
-				padding-left: 10%;
-			}
-		</style>
-
 		<!-- https://github.com/mcornale/devjobs-web-app -->
 		<!-- https://mcornale-devjobs-web-app.netlify.app/ -->
 		
@@ -35,31 +21,6 @@
 		</header>
 		<section class="cargos"></section>
 		
-		<script type="text/javascript">
-			fetch( "data.json" ).then(value => value.json()).then((value) => {
-				console.table( value[1] );
-				for( let count = 0; count <= value.length-1; count++ ) {
-					const data = {
-						id: value[count].id,
-						nombre: value[count].company,
-						logo: {
-							isotipo: "https://raw.githubusercontent.com/mcornale/devjobs-web-app/10c8bcec5dce55185ede8e4ea36b4010a65ffc34/public/" + value[count].logo,
-							color: value[count].logoBackground,
-						},
-						cargo: value[count].position,
-					}
-
-					$("section.cargos").append(`
-						<div class="cargo" data-id="${data.id}">
-							<h2>${data.nombre}</h2>
-							<div class="logo" style="padding: 30px;background: ${data.logo.color}">
-								<img src="${data.logo.isotipo}" alt="${data.nombre}" />
-							</div>
-						</div>
-					`);
-				}
-			});
-		</script>
-
+		<script src="index.js"></script>
 	</body>
 </html>
