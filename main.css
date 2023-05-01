@@ -5,23 +5,52 @@
 header {
 	background: url("https://mcornale-devjobs-web-app.netlify.app/static/media/bg-pattern-header.f3307602.svg");
 	padding: 20px 0;
-	margin-bottom: 60px;
+	position: relative;
+	padding-bottom: 60px;
 }
 header > img {
 	padding-left: 10%;
 }
 
+section.buscador {
+	background: white;
+	width: 90%;
+	margin: 30px auto 0;
+	border-radius: 6px;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+section.buscador > input {
+	outline: none;
+	height: 40px;
+	width: 100%;
+	border: none;
+	padding: 0 10px;
+}
+section.buscador > button {
+	background: var(--color);
+	border: none;
+	height: 40px;
+	width: 40px;
+	border-radius: 6px;
+}
+/* section.buscador > button > img {} */
+
 section.cargos {
-	background: whitesmoke;
 	background: #e7e7e7;
-	padding: 4%;
+	background: whitesmoke;
+	padding: 12% 4% 4%;
 }
 section.cargos > .cargo {
 	background: white;
 	padding: 3%;
 	border-radius: 20px;
 	position: relative;
-	margin-top: 50px;
+	margin-top: 60px;
 	padding-top: 30px;
 }
 section.cargos > .cargo > .logo {
