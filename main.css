@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
 	--color: #5964e0;
+}
+body {
+	font-family: 'Jost', sans-serif;
 }
 header {
 	background: url("https://mcornale-devjobs-web-app.netlify.app/static/media/bg-pattern-header.f3307602.svg");
 	padding: 20px 0;
 	position: relative;
 	padding-bottom: 60px;
+	background-position: right;
 }
 header > img {
 	padding-left: 10%;
@@ -38,32 +43,64 @@ section.buscador > button {
 	width: 40px;
 	border-radius: 6px;
 }
-/* section.buscador > button > img {} */
-
 section.cargos {
 	background: #e7e7e7;
 	background: whitesmoke;
-	padding: 12% 4% 4%;
+	padding: 10% 4% 4%;
 }
 section.cargos > .cargo {
 	background: white;
 	padding: 3%;
-	border-radius: 20px;
+	border-radius: 10px;
 	position: relative;
-	margin-top: 60px;
-	padding-top: 30px;
+	margin-top: 40px;
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
 }
 section.cargos > .cargo > .logo {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border-radius: 12px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: -30px;
+	top: -20px;
 }
 section.cargos > .cargo > .logo > img {
 	width: 60%;
+}
+section.cargos > .cargo > .since {
+	color: #888;
+	font-size: .9em;
+	margin-bottom: 5px;
+}
+section.cargos > .cargo > .location {
+	display: flex;
+	align-items: center;
+	margin-top: 3px;
+}
+section.cargos > .cargo > .location > img {
+	width: auto;
+	height: 14px;
+}
+section.cargos > .cargo > .location > p {
+	margin: 0;
+	padding: 0;
+	font-size: .9em;
+}
+section.cargos > .cargo > .nombreempresa {
+	margin-top: 10px;
+	color: #888;
+}
+section.cargos > .cargo > .content {
+	display: none;
+}
+section.cargos > .cargo > span.vermas {
+	color: var(--color);
+	font-weight: 500;
+	margin-top: 10px;
+	font-size: .8em;
 }
