@@ -26,7 +26,7 @@ fetch( "data.json" ).then(value => value.json()).then((value) => {
 		}
 
 		$("section.cargos").append(`
-			<div class="cargo" data-id="${data.id}" data-estado="plegado">
+			<div class="cargo" data-id="${data.id}">
 				<div class="logo" style="background: ${data.logo.color}">
 					<img src="${data.logo.isotipo}" alt="${data.nombre}" />
 				</div>
@@ -61,7 +61,10 @@ fetch( "data.json" ).then(value => value.json()).then((value) => {
 });
 
 $("body").on("click", ".cargo span.vermas", function(){
-	const empresa = $(this).parent().find(".nombreempresa").html();
 	$(this).parent().find(".content").fadeToggle();
-	console.debug( empresa );
+	if ( $(this).html() == "Ver más" ) {
+		$(this).html("Ver menos");
+	} else {
+		$(this).html("Ver más");
+	}
 });
